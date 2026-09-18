@@ -1,0 +1,15 @@
+{
+	"name": "adfquantcbatch10",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "edd92db2-bfba-42b0-bf94-1f8f675937dc",
+		"tenantId": "036a39dd-b131-4a30-92d2-0854d18380f8"
+	}
+}
