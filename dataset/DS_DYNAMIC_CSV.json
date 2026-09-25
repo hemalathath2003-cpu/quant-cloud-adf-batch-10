@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"FolderName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "input"
 			},
 			"FileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "attendance.csv"
 			}
 		},
 		"annotations": [],
