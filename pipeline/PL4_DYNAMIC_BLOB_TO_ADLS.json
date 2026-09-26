@@ -1,5 +1,5 @@
 {
-	"name": "PL4_DYNAMIC_CSV",
+	"name": "PL4_DYNAMIC_BLOB_TO_ADLS",
 	"properties": {
 		"activities": [
 			{
