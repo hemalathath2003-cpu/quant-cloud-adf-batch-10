@@ -1,5 +1,5 @@
 {
-	"name": "PL3_DYNAMICALLY_CSV_METHOD",
+	"name": "PL3_DYNAMICALLY_ADLS_TO_ADLS",
 	"properties": {
 		"activities": [
 			{
