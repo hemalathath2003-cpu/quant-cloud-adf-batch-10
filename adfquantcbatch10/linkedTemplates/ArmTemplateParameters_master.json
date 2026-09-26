@@ -8,6 +8,9 @@
 		"ls_adls_gen2_accountKey": {
 			"value": ""
 		},
+		"LS_Blob_Source_connectionString": {
+			"value": ""
+		},
 		"ls_adls_gen2_properties_typeProperties_url": {
 			"value": "https://qcadlsbatch10h123.dfs.core.windows.net/"
 		},

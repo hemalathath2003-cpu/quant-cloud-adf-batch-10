@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_adls_gen2'"
 		},
+		"LS_Blob_Source_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Blob_Source'"
+		},
 		"ls_adls_gen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://qcadlsbatch10h123.dfs.core.windows.net/"
@@ -44,6 +48,9 @@
 					},
 					"ls_adls_gen2_accountKey": {
 						"value": "[parameters('ls_adls_gen2_accountKey')]"
+					},
+					"LS_Blob_Source_connectionString": {
+						"value": "[parameters('LS_Blob_Source_connectionString')]"
 					},
 					"ls_adls_gen2_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_gen2_properties_typeProperties_url')]"
