@@ -53,7 +53,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"FolderName": "input",
-							"FileName": "salaries.csv"
+							"FileName": {
+								"value": "@pipeline().parameters.SourceFileName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -63,12 +66,23 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"FolderName": "output",
-							"FileName": "sink_salaries"
+							"FileName": {
+								"value": "@concat(\n        pipeline().parameters.SourceFileName,\n        '_',\n        pipeline().parameters.TargetFileName,\n        '_',\n        formatDateTime(startOfDay(utcNow()))\n        )",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"SourceFileName": {
+				"type": "string"
+			},
+			"TargetFileName": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
