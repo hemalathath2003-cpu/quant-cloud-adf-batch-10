@@ -1,0 +1,51 @@
+{
+	"name": "DS_JSON_TO_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "adfbatch10"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"habitat": {
+					"type": "string"
+				},
+				"age_years": {
+					"type": "integer"
+				},
+				"weight_kg": {
+					"type": "integer"
+				},
+				"endangered": {
+					"type": "boolean"
+				},
+				"country": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
