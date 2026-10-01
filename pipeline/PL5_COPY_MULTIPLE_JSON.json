@@ -92,7 +92,13 @@
 							"inputs": [
 								{
 									"referenceName": "DS_MULTIPLE_JSON",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"FileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
