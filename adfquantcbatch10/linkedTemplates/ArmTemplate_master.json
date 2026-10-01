@@ -7,13 +7,29 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfquantcbatch10"
 		},
-		"ls_adls_gen2_accountKey": {
+		"LS_AZURE_SQL_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_adls_gen2'"
+			"metadata": "Secure string for 'password' of 'LS_AZURE_SQL'"
 		},
 		"LS_Blob_Source_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Blob_Source'"
+		},
+		"ls_adls_gen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adls_gen2'"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "quantcloud359.database.windows.net"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DB_AZURE_SQL"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Hemalatha"
 		},
 		"ls_adls_gen2_properties_typeProperties_url": {
 			"type": "string",
@@ -46,11 +62,23 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ls_adls_gen2_accountKey": {
-						"value": "[parameters('ls_adls_gen2_accountKey')]"
+					"LS_AZURE_SQL_password": {
+						"value": "[parameters('LS_AZURE_SQL_password')]"
 					},
 					"LS_Blob_Source_connectionString": {
 						"value": "[parameters('LS_Blob_Source_connectionString')]"
+					},
+					"ls_adls_gen2_accountKey": {
+						"value": "[parameters('ls_adls_gen2_accountKey')]"
+					},
+					"LS_AZURE_SQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_server')]"
+					},
+					"LS_AZURE_SQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_database')]"
+					},
+					"LS_AZURE_SQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_userName')]"
 					},
 					"ls_adls_gen2_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_gen2_properties_typeProperties_url')]"
