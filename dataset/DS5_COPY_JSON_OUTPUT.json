@@ -1,0 +1,62 @@
+{
+	"name": "DS5_COPY_JSON_OUTPUT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
+				"fileSystem": "adfbatch10"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"habitat": {
+					"type": "string"
+				},
+				"age_years": {
+					"type": "integer"
+				},
+				"weight_kg": {
+					"type": "integer"
+				},
+				"endangered": {
+					"type": "boolean"
+				},
+				"country": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
