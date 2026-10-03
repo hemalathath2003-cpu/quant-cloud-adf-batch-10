@@ -5,6 +5,14 @@
 			"referenceName": "ls_adls_gen2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
