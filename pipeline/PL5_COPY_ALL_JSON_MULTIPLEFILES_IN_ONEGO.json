@@ -106,7 +106,7 @@
 									"referenceName": "DS5_COPY_JSON_OUTPUT",
 									"type": "DatasetReference",
 									"parameters": {
-										"FolderName": "processed_json",
+										"FolderName": "Processed_json",
 										"FileName": {
 											"value": "@item().name",
 											"type": "Expression"
