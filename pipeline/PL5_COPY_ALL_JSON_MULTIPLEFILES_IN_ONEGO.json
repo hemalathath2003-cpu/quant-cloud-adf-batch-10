@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS5_COPY_MUL_JSON",
+						"referenceName": "DS5_ALL_JSON_COPY",
 						"type": "DatasetReference",
 						"parameters": {
 							"FolderName": "input"
