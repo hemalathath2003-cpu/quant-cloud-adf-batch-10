@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Blob_Source'"
 		},
+		"LS_SQL_AZURE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_AZURE'"
+		},
 		"ls_adls_gen2_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_adls_gen2'"
@@ -28,6 +32,18 @@
 			"defaultValue": "DB_AZURE_SQL"
 		},
 		"LS_AZURE_SQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Hemalatha"
+		},
+		"LS_SQL_AZURE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "quantcloud359.database.windows.net"
+		},
+		"LS_SQL_AZURE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DB_AZURE_SQL"
+		},
+		"LS_SQL_AZURE_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Hemalatha"
 		},
@@ -68,6 +84,9 @@
 					"LS_Blob_Source_connectionString": {
 						"value": "[parameters('LS_Blob_Source_connectionString')]"
 					},
+					"LS_SQL_AZURE_password": {
+						"value": "[parameters('LS_SQL_AZURE_password')]"
+					},
 					"ls_adls_gen2_accountKey": {
 						"value": "[parameters('ls_adls_gen2_accountKey')]"
 					},
@@ -80,12 +99,41 @@
 					"LS_AZURE_SQL_properties_typeProperties_userName": {
 						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_userName')]"
 					},
+					"LS_SQL_AZURE_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_AZURE_properties_typeProperties_server')]"
+					},
+					"LS_SQL_AZURE_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_AZURE_properties_typeProperties_database')]"
+					},
+					"LS_SQL_AZURE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_AZURE_properties_typeProperties_userName')]"
+					},
 					"ls_adls_gen2_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_gen2_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adfquantcbatch10_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfquantcbatch10_ArmTemplate_0')]"
+			]
 		}
 	]
 }

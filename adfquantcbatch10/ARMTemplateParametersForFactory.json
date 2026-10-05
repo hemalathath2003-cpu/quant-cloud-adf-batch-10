@@ -11,6 +11,9 @@
 		"LS_Blob_Source_connectionString": {
 			"value": ""
 		},
+		"LS_SQL_AZURE_password": {
+			"value": ""
+		},
 		"ls_adls_gen2_accountKey": {
 			"value": ""
 		},
@@ -21,6 +24,15 @@
 			"value": "DB_AZURE_SQL"
 		},
 		"LS_AZURE_SQL_properties_typeProperties_userName": {
+			"value": "Hemalatha"
+		},
+		"LS_SQL_AZURE_properties_typeProperties_server": {
+			"value": "quantcloud359.database.windows.net"
+		},
+		"LS_SQL_AZURE_properties_typeProperties_database": {
+			"value": "DB_AZURE_SQL"
+		},
+		"LS_SQL_AZURE_properties_typeProperties_userName": {
 			"value": "Hemalatha"
 		},
 		"ls_adls_gen2_properties_typeProperties_url": {
