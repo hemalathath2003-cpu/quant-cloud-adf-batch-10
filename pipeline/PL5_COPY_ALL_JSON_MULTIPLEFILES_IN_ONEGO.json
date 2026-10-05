@@ -94,11 +94,7 @@
 									"referenceName": "DS5_COPY_MUL_JSON",
 									"type": "DatasetReference",
 									"parameters": {
-										"FolderName": "input",
-										"FileName": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
+										"FolderName": "input"
 									}
 								}
 							],
