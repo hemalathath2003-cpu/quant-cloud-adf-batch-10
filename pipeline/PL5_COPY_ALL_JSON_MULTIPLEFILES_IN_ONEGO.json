@@ -130,7 +130,17 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('ALL_JSON_COPY').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@item()",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
