@@ -1,0 +1,38 @@
+{
+	"name": "PL7_1_SQL_TO_ADLS",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select Name, Department, Education_Level,\nGender, Monthly_Salary from dbo.employees",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "DS1_AZURE_Sql",
+						"type": "DatasetReference",
+						"parameters": {
+							"Schema_Name": "dbo",
+							"Table_Name": "employee"
+						}
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"annotations": []
+	}
+}
