@@ -1,0 +1,32 @@
+{
+	"name": "DS1_SQL_OUTPUT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "SQL Databases"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": "output",
+				"fileSystem": "adfbatch10"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
